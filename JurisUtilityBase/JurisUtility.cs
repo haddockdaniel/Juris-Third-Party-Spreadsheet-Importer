@@ -10,6 +10,7 @@ using Gizmox.CSharp;
 using Gizmox.Data;
 using JurisAuthenticator;
 using JurisUtilityBase.Properties;
+using System.Windows;
 
 namespace JurisUtilityBase
 {
@@ -25,6 +26,7 @@ namespace JurisUtilityBase
         private readonly SqlCommand[] _commands = new SqlCommand[3];
         private Instance _instance;
         private readonly Instances _instances;
+        public bool error;
 
         #endregion
 
@@ -127,7 +129,17 @@ namespace JurisUtilityBase
 
         public int ExecuteNonQuery(int connection, string sql)
         {
-            return _connections[connection].ExecuteNonQuery(sql);
+            error = false;
+            try
+            {
+                return _connections[connection].ExecuteNonQuery(sql);
+            }
+            catch (Exception EXX)
+            {
+                File.AppendAllText(@"c:\intel\wtf.txt", EXX.Message + "\r\n" + sql + Environment.NewLine);
+                error = true;
+                return 0;
+            }
         }
 
         public DataSet RecordsetFromSQL(string sql)
