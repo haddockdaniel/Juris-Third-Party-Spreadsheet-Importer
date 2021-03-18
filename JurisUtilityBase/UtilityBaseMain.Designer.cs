@@ -51,6 +51,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.JurisLogoImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LexisNexisLogoPictureBox)).BeginInit();
             this.statusStrip.SuspendLayout();
@@ -206,7 +207,7 @@
             this.buttonMatters.BackColor = System.Drawing.Color.LightGray;
             this.buttonMatters.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMatters.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.buttonMatters.Location = new System.Drawing.Point(111, 218);
+            this.buttonMatters.Location = new System.Drawing.Point(121, 216);
             this.buttonMatters.Name = "buttonMatters";
             this.buttonMatters.Size = new System.Drawing.Size(126, 30);
             this.buttonMatters.TabIndex = 21;
@@ -232,7 +233,7 @@
             this.buttonOrig.BackColor = System.Drawing.Color.LightGray;
             this.buttonOrig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOrig.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.buttonOrig.Location = new System.Drawing.Point(110, 322);
+            this.buttonOrig.Location = new System.Drawing.Point(466, 216);
             this.buttonOrig.Name = "buttonOrig";
             this.buttonOrig.Size = new System.Drawing.Size(149, 30);
             this.buttonOrig.TabIndex = 23;
@@ -245,7 +246,7 @@
             this.buttonMatOrig.BackColor = System.Drawing.Color.LightGray;
             this.buttonMatOrig.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMatOrig.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.buttonMatOrig.Location = new System.Drawing.Point(111, 373);
+            this.buttonMatOrig.Location = new System.Drawing.Point(467, 267);
             this.buttonMatOrig.Name = "buttonMatOrig";
             this.buttonMatOrig.Size = new System.Drawing.Size(149, 30);
             this.buttonMatOrig.TabIndex = 24;
@@ -255,7 +256,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(118, 428);
+            this.button2.Location = new System.Drawing.Point(382, 425);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(255, 23);
             this.button2.TabIndex = 25;
@@ -265,23 +266,33 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(507, 373);
+            this.button3.Location = new System.Drawing.Point(467, 170);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(141, 23);
             this.button3.TabIndex = 26;
-            this.button3.Text = "Fix Zips";
+            this.button3.Text = "Set Up Orig";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(489, 267);
+            this.button4.Location = new System.Drawing.Point(112, 314);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 23);
+            this.button4.Size = new System.Drawing.Size(148, 43);
             this.button4.TabIndex = 27;
-            this.button4.Text = "Update MatDesc";
+            this.button4.Text = "Assign default addy to all clients/matters with no addy";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(511, 324);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 28;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // UtilityBaseMain
             // 
@@ -290,6 +301,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(658, 572);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -351,6 +363,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
